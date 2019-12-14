@@ -1,11 +1,10 @@
 # require 'pry'
 #     # binding.pry
 
-def prime?(n) 
-    return false if n < 2
-    return true if n == 2
-    (2..Math.sqrt(n).ceil).each do |x|
-     return false if n % x == 0
-        end
-    true
+def prime?(n)
+    if n < 2
+        false 
+    else #https://www.youtube.com/watch?v=33pLqGvk-PM had to use this video to solve :/
+        (2...n).none? {|divisor| n % divisor == 0 }
+    end
 end
