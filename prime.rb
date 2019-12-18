@@ -8,3 +8,4 @@ def prime? (num)# Add  code here!
   end
 end
 puts prime?(105557)
+
